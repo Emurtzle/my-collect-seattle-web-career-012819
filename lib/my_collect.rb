@@ -4,7 +4,7 @@ def my_collect (array, method)
 
   while i < array.length
     yield array[i]
-    array[i] = method.call(array[i])
+    array[i] <<yield array[i]
     i += 1
   end
   array
